@@ -1,0 +1,48 @@
+.weatherImage {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+.card {
+  background: #feffdf;
+}
+.sun {
+  display: block;
+  margin: 0 auto;
+}
+.temperature {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+.units {
+  font-size: 24px;
+}
+.condition {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+}
+.humidity {
+  text-align: center;
+  font-size: 14px;
+  color: #70757a;
+}
+.wind {
+  text-align: center;
+  font-size: 14px;
+  color: #70757a;
+}
+.daily-forecast {
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+.Footer {
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+}
