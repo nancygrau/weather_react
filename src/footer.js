@@ -5,7 +5,11 @@ export default function Footer() {
   return (
     <div className="Footer">
       👩‍💻
-      <a href="https://github.com/nancygrau/Weather-App_v2" target="_blank">
+      <a
+        href="https://github.com/nancygrau/weather_react"
+        rel="noreferrer"
+        target="_blank"
+      >
         Open-source Code
       </a>
       by Nancy Grau
