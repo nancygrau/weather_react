@@ -6,8 +6,21 @@
 .zurich,
 .paris,
 .tokyo {
-  background: none;
-  border: none;
+  background: #feffdf;
+  border: 1px solid #feffdf;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+.zurich:hover {
+  background: #ffe168;
+}
+.paris:hover {
+  background: #ffe168;
+}
+.tokyo:hover {
+  background: #ffe168;
 }
 .card {
   background: #feffdf;
@@ -27,7 +40,9 @@
   background: none;
   border: none;
   font-size: 18px;
+  text-decoration: underline;
 }
+
 .condition {
   text-align: center;
   font-weight: bold;
