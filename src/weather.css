@@ -3,6 +3,12 @@
   display: block;
   margin: 0 auto;
 }
+.zurich,
+.paris,
+.tokyo {
+  background: none;
+  border: none;
+}
 .card {
   background: #feffdf;
 }
@@ -15,8 +21,12 @@
   font-weight: bold;
   font-size: 24px;
 }
-.units {
-  font-size: 24px;
+
+.celsius,
+.fahrenheit {
+  background: none;
+  border: none;
+  font-size: 18px;
 }
 .condition {
   text-align: center;

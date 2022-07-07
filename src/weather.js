@@ -40,7 +40,7 @@ export default function Weather() {
           <span>{weatherData.temperature}</span>
           <span className="units">
             <button className="celsius">°C</button> |{" "}
-            <button className="fahrenheit">F</button>
+            <button className="fahrenheit">°F</button>
           </span>
         </h3>
         <div className="condition">{weatherData.description}</div>
