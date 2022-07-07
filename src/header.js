@@ -1,6 +1,6 @@
 import React from "react";
 import "./weather.css";
-import { ReactComponent as Forecast } from "./forecast.svg";
+import { ReactComponent as ForecastImage } from "./forecast.svg";
 
 export default function Header() {
   return (
@@ -19,7 +19,7 @@ export default function Header() {
         </div>
       </div>
       <br />
-      <Forecast className="firstImage" />
+      <ForecastImage className="firstImage" />
     </div>
   );
 }
