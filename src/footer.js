@@ -12,7 +12,7 @@ export default function Footer() {
       >
         Open-source Code
       </a>
-      by Nancy Grau
+      &nbsp;by Nancy Grau
     </div>
   );
 }

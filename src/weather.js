@@ -46,6 +46,95 @@ export default function Weather() {
         <div className="condition">{weatherData.description}</div>
         <div className="wind">Wind: {weatherData.wind} km/h</div>
         <div className="humidity">Humidity: {weatherData.humidity}%</div>
+        <div class="daily-forecast">5 Day Weather</div>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Monday</h5>
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  className="sun"
+                />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">High 15°C</li>
+                <li class="list-group-item">Low 1°C</li>
+                <li class="list-group-item">Sunny</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tuesday</h5>
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  className="sun"
+                />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">High 14°C</li>
+                <li class="list-group-item">Low 1°C</li>
+                <li class="list-group-item">Sunny</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wednesday</h5>
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  className="sun"
+                />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">High 16°C</li>
+                <li class="list-group-item">Low 2°C</li>
+                <li class="list-group-item">Sunny</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Thursday</h5>
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  className="sun"
+                />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">High 17°C</li>
+                <li class="list-group-item">Low 3°C</li>
+                <li class="list-group-item">Sunny</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  className="sun"
+                />
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">High 17°C</li>
+                <li class="list-group-item">Low 3°C</li>
+                <li class="list-group-item">Sunny</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
