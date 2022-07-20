@@ -25,6 +25,9 @@
 .card {
   background: #feffdf;
 }
+.btn-primary {
+  margin: 10px 5px;
+}
 .sun {
   display: block;
   margin: 0 auto;
