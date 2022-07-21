@@ -1,3 +1,4 @@
+
 .firstImage {
   width: 400px;
   display: block;
@@ -12,6 +13,7 @@
   padding: 5px 10px;
   border-radius: 12px;
   transition-duration: 0.4s;
+  margin-top: 20px;
 }
 .zurich:hover {
   background: #ffe168;
@@ -24,6 +26,7 @@
 }
 .card {
   background: #feffdf;
+  max-width: 1500px;
 }
 .btn-primary {
   margin: 10px 5px;
@@ -43,7 +46,9 @@
   background: none;
   border: none;
   font-size: 18px;
-  text-decoration: underline;
+  text-decoration: none;
+  position:relative;
+  top: -3px
 }
 
 .condition {
@@ -56,19 +61,15 @@
   text-align: center;
   font-size: 14px;
   color: #70757a;
+  margin-bottom: 50px;
 }
 .wind {
   text-align: center;
   font-size: 14px;
   color: #70757a;
 }
-.daily-forecast {
-  font-size: 24px;
-  text-align: left;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-left: 5px;
-}
+.five-day{text-align: center;}
+
 .Footer {
   font-weight: bold;
   text-align: center;

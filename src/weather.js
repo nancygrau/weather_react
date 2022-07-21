@@ -46,9 +46,10 @@ export default function Weather() {
         <div className="condition">{weatherData.description}</div>
         <div className="wind">Wind: {weatherData.wind} km/h</div>
         <div className="humidity">Humidity: {weatherData.humidity}%</div>
-        <div class="daily-forecast">5 Day Weather</div>
+        
+        <div class="five-day">
 
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-sm-2">
             <div class="card">
               <div class="card-body">
@@ -132,6 +133,7 @@ export default function Weather() {
                 <li class="list-group-item">Low 3°C</li>
                 <li class="list-group-item">Sunny</li>
               </ul>
+              </div>
             </div>
           </div>
         </div>
