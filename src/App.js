@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Weather from "./weather";
 import Header from "./header";
