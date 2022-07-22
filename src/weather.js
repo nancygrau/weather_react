@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./weather.css";
 
 export default function Weather() {
-  let weatherData = {
-    city: "Zürich",
-    temperature: 31,
-    date: "Tuesday 10:00",
-    description: "Sunny",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: 50,
-    wind: 10,
+  
+  const [weatherData, setWeatherData]=useState({ ready: false });
+  function handleResponse(response){
+    console.log(response.data);
+    setWeatherData({
+      ready:true,
+      temperature:response.data.main.temp,
+      date: "Friday 17.30",
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      city: response.data.name,
+      description: response.data.weather[0].description,
+      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",}); 
   };
-  return (
+  if (weatherData.ready){return (
     <div className="card">
       <div className="card-body">
         <form>
@@ -37,13 +43,13 @@ export default function Weather() {
           className="sun"
         />
         <h3 className="temperature">
-          <span>{weatherData.temperature}</span>
+          <span>{Math.round(weatherData.temperature)}</span>
           <span className="units">
             <button className="celsius">°C</button> |{" "}
             <button className="fahrenheit">°F</button>
           </span>
         </h3>
-        <div className="condition">{weatherData.description}</div>
+        <div className="condition text-capitalize">{weatherData.description}</div>
         <div className="wind">Wind: {weatherData.wind} km/h</div>
         <div className="humidity">Humidity: {weatherData.humidity}%</div>
         
@@ -57,7 +63,7 @@ export default function Weather() {
                 <img
                   src={weatherData.imgUrl}
                   alt={weatherData.description}
-                  className="sun"
+                  className="sun text-capitalize"
                 />
               </div>
               <ul class="list-group list-group-flush">
@@ -74,7 +80,7 @@ export default function Weather() {
                 <img
                   src={weatherData.imgUrl}
                   alt={weatherData.description}
-                  className="sun"
+                  className="sun text-capitalize"
                 />
               </div>
               <ul class="list-group list-group-flush">
@@ -91,7 +97,7 @@ export default function Weather() {
                 <img
                   src={weatherData.imgUrl}
                   alt={weatherData.description}
-                  className="sun"
+                  className="sun text-capitalize"
                 />
               </div>
               <ul class="list-group list-group-flush">
@@ -108,7 +114,7 @@ export default function Weather() {
                 <img
                   src={weatherData.imgUrl}
                   alt={weatherData.description}
-                  className="sun"
+                  className="sun text-capitalize"
                 />
               </div>
               <ul class="list-group list-group-flush">
@@ -125,7 +131,7 @@ export default function Weather() {
                 <img
                   src={weatherData.imgUrl}
                   alt={weatherData.description}
-                  className="sun"
+                  className="sun text-capitalize"
                 />
               </div>
               <ul class="list-group list-group-flush">
@@ -139,5 +145,9 @@ export default function Weather() {
         </div>
       </div>
     </div>
-  );
+  );} else {const apiKey="8ee746d18f9f9f4609efcf4a58ee9252";
+let city="Zürich"
+let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(handleResponse);
+return "Loading...";} 
 }
