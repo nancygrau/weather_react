@@ -1,15 +1,12 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props){return(
 <div className="WeatherInfo">
     <h1>{props.data.city}</h1>
     <h2><FormattedDate date={props.data.date}/></h2>
-    <img
-      src={props.data.imgUrl}
-      alt={props.data.description}
-      className="sun"
-    />
+    <WeatherIcon code={props.data.imgUrl}/>
     <h3 className="temperature">
       <span>{Math.round(props.data.temperature)}</span>
       <span className="units">
@@ -28,11 +25,7 @@ export default function WeatherInfo(props){return(
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Monday</h5>
-            <img
-              src={props.data.imgUrl}
-              alt={props.data.description}
-              className="sun text-capitalize"
-            />
+            <WeatherIcon code={props.data.imgUrl}/>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">High 15°C</li>
@@ -45,11 +38,7 @@ export default function WeatherInfo(props){return(
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Tuesday</h5>
-            <img
-              src={props.data.imgUrl}
-              alt={props.data.description}
-              className="sun text-capitalize"
-            />
+            <WeatherIcon code={props.data.imgUrl}/>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">High 14°C</li>
@@ -62,11 +51,7 @@ export default function WeatherInfo(props){return(
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Wednesday</h5>
-            <img
-              src={props.data.imgUrl}
-              alt={props.data.description}
-              className="sun text-capitalize"
-            />
+            <WeatherIcon code={props.data.imgUrl}/>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">High 16°C</li>
@@ -79,11 +64,7 @@ export default function WeatherInfo(props){return(
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Thursday</h5>
-            <img
-              src={props.data.imgUrl}
-              alt={props.data.description}
-              className="sun text-capitalize"
-            />
+            <WeatherIcon code={props.data.imgUrl}/>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">High 17°C</li>
@@ -96,11 +77,7 @@ export default function WeatherInfo(props){return(
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Friday</h5>
-            <img
-              src={props.data.imgUrl}
-              alt={props.data.description}
-              className="sun text-capitalize"
-            />
+            <WeatherIcon code={props.data.imgUrl}/>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">High 17°C</li>

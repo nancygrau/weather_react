@@ -17,7 +17,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       city: response.data.name,
       description: response.data.weather[0].description,
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,}); 
+      imgUrl: response.data.weather[0].icon,}); 
   };
   function search(){
     const apiKey="8ee746d18f9f9f4609efcf4a58ee9252";
