@@ -48,7 +48,8 @@
   text-decoration: none;
   position:relative;
   top: -3px;
-  color: black
+  color: black;
+  margin-left: 5px;
 }
 
 .condition {
