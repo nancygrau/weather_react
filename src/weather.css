@@ -26,10 +26,6 @@
 }
 .card {
   background: #feffdf;
-  max-width: 1500px;
-}
-.btn-primary {
-  margin: 10px 5px;
 }
 .sun {
   display: block;
