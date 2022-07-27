@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherDailyForecast from "./WeatherDailyForecast";
 import axios from "axios";
 import "./weather.css";
 
@@ -7,10 +8,12 @@ export default function Weather(props) {
   
   const [weatherData, setWeatherData]=useState({ ready: false });
   const[city, setCity]=useState(props.defaultCity)
+
   function handleResponse(response){
     console.log(response.data);
     setWeatherData({
       ready:true,
+      coordinates:response.data.coord,
       temperature:response.data.main.temp,
       date: new Date(response.data.dt*1000),
       wind: response.data.wind.speed,
@@ -35,7 +38,7 @@ export default function Weather(props) {
       <div className="card-body">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-6 offset-2">
           <input
             type="text"
             placeholder="Search for a city"
@@ -45,12 +48,13 @@ export default function Weather(props) {
             onChange={handleCityChange}
           />
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary w-50"/>
+          <div className="col-2">
+            <input type="submit" value="Search" className="btn btn-primary w-100"/>
           </div>
           </div>
         </form>
         <WeatherInfo data={weatherData}/>
+        <WeatherDailyForecast coordinates={weatherData.coordinates}/>
       </div>
     </div>
   );} 
